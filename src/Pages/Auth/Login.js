@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { Col, Row, Button, Input, Form, message } from 'antd'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Fade } from 'react-awesome-reveal'
 import { auth } from '../../Config/firebase'
 

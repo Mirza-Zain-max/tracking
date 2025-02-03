@@ -70,7 +70,7 @@ const TrackShipment = () => {
             message.success(`${results.length} deliveries found with this CN Number!`);
         } else {
             setTrackResult(null);
-            message.error("No found data please type correct CN Number.");
+            message.error("No delivery found with this CN Number.");
         }
     };
 
@@ -90,11 +90,11 @@ const TrackShipment = () => {
     };
 
     return (
-        <main className="d-flex auth justify-content-center align-items-center">
+        <main className="d-flex justify-content-center align-items-center" >
             <Container>
                 <Row className="d-flex justify-content-center align-items-center" >
-                    <Col span={12}>
-                        <Card className="mt-5 border-1 border-black">
+                    <Col span={24}>
+                        <Card className="mt-5">
                             <Title level={1}>Track Shipment</Title>
                             <label className="fw-bolder mb-4">Enter CN Number:</label>
                             <Input className="mb-4" type="text" value={trackCN} onChange={handleTrackCNChange} onKeyDown={handleKeyPress} placeholder="Enter CN Number" />
@@ -104,7 +104,7 @@ const TrackShipment = () => {
                             {trackResult ? (
                                 <div>
                                     <hr />
-                                    <h3 className="text-center">{deliveries.riderName}</h3>
+                                    <h3 className="text-center">Tracking Shipment</h3>
                                     {/* <Table border="3" bordered style={{ marginTop: '20px', width: '100%', textAlign: 'left' }} rowKey={(record) => record.id}>
                                         <thead>
                                             <tr>
@@ -124,7 +124,7 @@ const TrackShipment = () => {
                                         </tbody>
                                     </Table> */}
                                     {trackResult && trackResult.length > 0 && (
-                                        <Table border="2" bordered className="border-black">
+                                        <Table border="1">
                                             <thead>
                                                 <tr>
                                                     <th>CN Number</th>

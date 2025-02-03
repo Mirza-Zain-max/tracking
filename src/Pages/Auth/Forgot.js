@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Button, Container } from 'react-bootstrap'
-import { Col, Row, Input, Form, message } from 'antd'
+import {  Container } from 'react-bootstrap'
+import { Col, Row,Button, Input, Form, message } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { sendPasswordResetEmail } from 'firebase/auth'
 import { auth } from '../../Config/firebase'
@@ -49,7 +49,7 @@ const Frogot = () => {
                                 <Button htmlType='submit' onClick={handleSubmit} className='w-100 border-0 bg-danger text-light'>Submit</Button>
                             </Col>
                             <Col span={24} className='d-flex justify-content-center align-items-center'>
-                                <Button htmlType='submit' onClick={() => navigate(-1)} className='text-center mt-3'>Back To Page</Button>
+                                <Button loading={isProcessing} htmlType='submit'  onClick={() => navigate(-1)} className='text-center mt-3'>Back To Page</Button>
                             </Col>
                         </Row>
                     </Form>
